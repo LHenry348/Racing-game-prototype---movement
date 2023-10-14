@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public enum GameStates { countDown, running, raceOver};
+public enum GameStates { countDown, running, raceOver };
 
 public class GameManager : MonoBehaviour
 {
@@ -39,7 +39,7 @@ public class GameManager : MonoBehaviour
 
     void LevelStart()
     {
-        //gameState = GameStates.countDown;
+        gameState = GameStates.countDown;
     }
 
     public GameStates GetGameState()

@@ -28,6 +28,7 @@ public class CountdownUIHandler : MonoBehaviour
             else
             {
                 countDownText.text = "GO";
+                GameManager.instance.OnRaceStart();
                 break;
             }
             counter--;
