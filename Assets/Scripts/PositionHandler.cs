@@ -6,6 +6,12 @@ using UnityEngine;
 public class PositionHandler : MonoBehaviour
 {
     public List<CarLapCounter> carLapCounters = new List<CarLapCounter>();
+
+    private void Awake()
+    {
+        
+    }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -13,7 +19,9 @@ public class PositionHandler : MonoBehaviour
         carLapCounters = carLapCounterArray.ToList<CarLapCounter>();
 
         foreach (CarLapCounter lapCounters in carLapCounters)
+        {
             lapCounters.OnPassCheckpoint += OnPassCheckpoint;
+        }
     }
     void OnPassCheckpoint(CarLapCounter carLapCounter)
     {

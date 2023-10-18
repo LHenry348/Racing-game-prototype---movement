@@ -8,10 +8,13 @@ public enum GameStates { countDown, running, raceOver };
 
 public class GameManager : MonoBehaviour
 {
+    //static instance of GameManager so other scripts can access it
     public static GameManager instance = null;
 
+    //states
     GameStates gameState = GameStates.countDown;
 
+    //time
     float raceStartedTime = 0;
     float raceCompletedTime = 0;
 
@@ -59,14 +62,16 @@ public class GameManager : MonoBehaviour
     public float GetRaceTime()
     {
         if (gameState == GameStates.raceOver)
+        {
             return raceCompletedTime - raceStartedTime;
+        }
         else return Time.time - raceStartedTime;
     }
 
     public void OnRaceStart()
     {
         raceStartedTime = Time.time;
-        gameState = GameStates.running;
+        ChangeGameState(GameStates.running);
     }
 
     public void OnRaceCompleted()
