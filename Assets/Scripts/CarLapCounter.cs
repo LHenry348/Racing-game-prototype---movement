@@ -9,7 +9,7 @@ public class CarLapCounter : MonoBehaviour
     float timeAtLastPassedCheckpoint = 0;
     int numberOfPassedCheckpoints = 0;
     int lapsCompleted = 0;
-    const int lapsToComplete = 1;
+    const int lapsToComplete = 2;
     bool isRaceCompleted = false;
 
     int carPosition = 0;
