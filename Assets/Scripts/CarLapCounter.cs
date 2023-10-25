@@ -14,7 +14,18 @@ public class CarLapCounter : MonoBehaviour
 
     int carPosition = 0;
 
+    LapCounterUIHandler lapCounterUIHandler;
+
     public event Action<CarLapCounter> OnPassCheckpoint;
+
+    void Start()
+    {
+        if(CompareTag("Player"))
+        {
+            lapCounterUIHandler = FindObjectOfType<LapCounterUIHandler>();
+            lapCounterUIHandler.SetLapText($"Lap {lapsCompleted + 1}/{lapsToComplete}");
+        }
+    }
 
     public void SetCarPosition(int position)
     {
@@ -51,6 +62,8 @@ public class CarLapCounter : MonoBehaviour
 
                     if (lapsCompleted >= lapsToComplete)
                         isRaceCompleted = true;
+                    if (!isRaceCompleted && lapCounterUIHandler != null)
+                        lapCounterUIHandler.SetLapText($"Lap {lapsCompleted + 1}/{lapsToComplete}");
                 }
 
                 OnPassCheckpoint?.Invoke(this);
