@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - CheckPoint
+  - EnemyTurn
   layers:
   - Default
   - TransparentFX
