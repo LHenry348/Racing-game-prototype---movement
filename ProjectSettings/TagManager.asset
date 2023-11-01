@@ -6,6 +6,7 @@ TagManager:
   tags:
   - CheckPoint
   - EnemyTurn
+  - Jump
   layers:
   - Default
   - TransparentFX
@@ -13,7 +14,7 @@ TagManager:
   - 
   - Water
   - UI
-  - 
+  - Surface
   - 
   - 
   - 
@@ -40,6 +41,12 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Race track
+    uniqueID: 1570540063
+    locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Flying
+    uniqueID: 96585639
     locked: 0
