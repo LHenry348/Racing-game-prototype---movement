@@ -21137,7 +21137,7 @@ GameObject:
   - component: {fileID: 1309723266}
   - component: {fileID: 1309723267}
   m_Layer: 0
-  m_Name: car2
+  m_Name: Car
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -30535,7 +30535,7 @@ ParticleSystem:
   ringBufferLoopRange: {x: 0, y: 1}
   emitterVelocityMode: 1
   looping: 1
-  prewarm: 0
+  prewarm: 1
   playOnAwake: 0
   useUnscaledTime: 0
   autoRandomSeed: 1

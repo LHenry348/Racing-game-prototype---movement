@@ -22,7 +22,7 @@ public class CarLapCounter : MonoBehaviour
     {
         if(CompareTag("Player"))
         {
-            lapCounterUIHandler = FindObjectOfType<LapCounterUIHandler>();
+            lapCounterUIHandler = FindFirstObjectByType<LapCounterUIHandler>();
             lapCounterUIHandler.SetLapText($"Lap {lapsCompleted + 1}/{lapsToComplete}");
         }
     }

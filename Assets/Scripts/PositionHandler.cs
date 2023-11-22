@@ -15,7 +15,7 @@ public class PositionHandler : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        CarLapCounter[] carLapCounterArray = FindObjectsOfType<CarLapCounter>();
+        CarLapCounter[] carLapCounterArray = FindObjectsByType<CarLapCounter>(FindObjectsSortMode.None);
         carLapCounters = carLapCounterArray.ToList<CarLapCounter>();
 
         foreach (CarLapCounter lapCounters in carLapCounters)
