@@ -55,6 +55,12 @@ public class CarController : MonoBehaviour
             return;
         }
 
+        else if (GameManager.instance.GetGameState() == GameStates.raceOver)
+        {
+            carRigidbody2D.drag = Mathf.Lerp(carRigidbody2D.drag, 3.0f, Time.fixedDeltaTime * 3);
+            return;
+        }
+
         ApplyEngineForce();
         KillOrthogonalVelocity();
         ApplySteering();
@@ -207,6 +213,7 @@ public class CarController : MonoBehaviour
 
             if (jumpHeightScale > 0.2f)
             {
+                carRigidbody2D.drag = Mathf.Lerp(carRigidbody2D.drag, 3.0f, Time.fixedDeltaTime * 3);
                 landingParticles.Play();
             }
 

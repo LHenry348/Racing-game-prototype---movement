@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 41f1c8b4039d9e1468a64a9a3696eae5
+guid: eb80f1152f27bfd4e8fa98a0df53d711
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7895920821964643569
-    second: Track 2_0
+      213: 1527315980038903510
+    second: Race car shadow_0
   externalObjects: {}
   serializedVersion: 12
   mipmaps:
@@ -146,13 +146,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Track 2_0
+      name: Race car shadow_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 963
-        height: 582
+        width: 186
+        height: 382
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -160,8 +160,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 1fc10d73722f39d60800000000000000
-      internalID: 7895920821964643569
+      spriteID: 6d61ff1bacd123510800000000000000
+      internalID: 1527315980038903510
       vertices: []
       indices: 
       edges: []
@@ -177,7 +177,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Track 2_0: 7895920821964643569
+      Race car shadow_0: 1527315980038903510
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

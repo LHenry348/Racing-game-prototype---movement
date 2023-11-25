@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 41f1c8b4039d9e1468a64a9a3696eae5
+guid: 4df26ae9bef7a5e49ae5fa626abef6c8
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7895920821964643569
-    second: Track 2_0
+      213: 1811800474284644092
+    second: Yellow race car_0
   externalObjects: {}
   serializedVersion: 12
   mipmaps:
@@ -146,13 +146,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Track 2_0
+      name: Yellow race car_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 963
-        height: 582
+        width: 186
+        height: 382
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -160,8 +160,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 1fc10d73722f39d60800000000000000
-      internalID: 7895920821964643569
+      spriteID: cf6de999eeec42910800000000000000
+      internalID: 1811800474284644092
       vertices: []
       indices: 
       edges: []
@@ -177,7 +177,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Track 2_0: 7895920821964643569
+      Yellow race car_0: 1811800474284644092
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
