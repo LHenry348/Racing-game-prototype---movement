@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 41f1c8b4039d9e1468a64a9a3696eae5
+guid: 0ae391239ae23714aafffac2fc795069
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7895920821964643569
-    second: Track 2_0
+      213: 4360390788417139489
+    second: sand_0
   externalObjects: {}
   serializedVersion: 12
   mipmaps:
@@ -146,13 +146,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Track 2_0
+      name: sand_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 963
-        height: 582
+        width: 128
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -160,8 +160,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 1fc10d73722f39d60800000000000000
-      internalID: 7895920821964643569
+      spriteID: 1233d79d158338c30800000000000000
+      internalID: 4360390788417139489
       vertices: []
       indices: 
       edges: []
@@ -177,7 +177,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Track 2_0: 7895920821964643569
+      sand_0: 4360390788417139489
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
