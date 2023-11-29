@@ -192,11 +192,11 @@ public class CarController : MonoBehaviour
             yield return null;
         }
 
-        if (Physics2D.OverlapCircle(transform.position, 1.5f))
+        if (Physics2D.OverlapCircle(transform.position, 0.5f))
         {
             isJumping = false;
 
-            Jump(0.2f, 0.6f);
+            Jump(0.2f, 0.9f); 
         }
 
         else

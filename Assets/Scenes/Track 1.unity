@@ -6497,6 +6497,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy Car (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 5422966303109464384, guid: 5b39bd0e28aff014c959f7657bb0fef6, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -27305,6 +27309,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy Car
       objectReference: {fileID: 0}
+    - target: {fileID: 5422966303109464384, guid: 5b39bd0e28aff014c959f7657bb0fef6, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -46968,6 +46976,10 @@ PrefabInstance:
     - target: {fileID: 5422966303109464384, guid: 5b39bd0e28aff014c959f7657bb0fef6, type: 3}
       propertyPath: m_Name
       value: Enemy Car (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5422966303109464384, guid: 5b39bd0e28aff014c959f7657bb0fef6, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
       objectReference: {fileID: 0}
     - target: {fileID: 8976266663299301103, guid: 5b39bd0e28aff014c959f7657bb0fef6, type: 3}
       propertyPath: m_LocalPosition.x
