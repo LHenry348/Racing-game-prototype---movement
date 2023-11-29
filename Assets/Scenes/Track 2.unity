@@ -299,7 +299,7 @@ GameObject:
   - component: {fileID: 883894740}
   - component: {fileID: 883894739}
   m_Layer: 0
-  m_Name: Blue race car
+  m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5301,8 +5301,9 @@ GameObject:
   - component: {fileID: 1060615724}
   - component: {fileID: 1060615723}
   - component: {fileID: 1060615722}
+  - component: {fileID: 1060615729}
   m_Layer: 0
-  m_Name: Car
+  m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5510,6 +5511,20 @@ Transform:
   - {fileID: 1826986345}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1060615729
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1060615721}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4efa820b114b328479e97500bbf810e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  characterDB: {fileID: 11400000, guid: f9a583aca2c481448b48216a4694cb72, type: 2}
+  artworkSprite: {fileID: 883894739}
 --- !u!1 &1741690631
 GameObject:
   m_ObjectHideFlags: 0
