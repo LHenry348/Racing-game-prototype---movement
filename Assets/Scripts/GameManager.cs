@@ -10,6 +10,7 @@ public class GameManager : MonoBehaviour
 {
     //static instance of GameManager so other scripts can access it
     public static GameManager instance = null;
+    public AudioSource bgMusic;
 
     //states
     GameStates gameState = GameStates.countDown;
@@ -43,6 +44,7 @@ public class GameManager : MonoBehaviour
     void LevelStart()
     {
         gameState = GameStates.countDown;
+        bgMusic.PlayScheduled(AudioSettings.dspTime + 3);
     }
 
     public GameStates GetGameState()
