@@ -20,8 +20,5 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/CharacterSelect.unity
     guid: ae11a4e8ac278ed4e949e4180ad8d433
-  - enabled: 1
-    path: Assets/Scenes/Tutorial.unity
-    guid: f2299da69266a4346893616ce7a529bb
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0

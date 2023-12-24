@@ -29,7 +29,6 @@ public class CarController : MonoBehaviour
     Rigidbody2D carRigidbody2D;
     Collider2D carCollider;
     SurfaceDetection surfaceDetection;
-    public AudioSource engineSound;
 
     private void Awake()
     {
@@ -92,11 +91,6 @@ public class CarController : MonoBehaviour
         if (accelerationInput == 0)
             carRigidbody2D.drag = Mathf.Lerp(carRigidbody2D.drag, 3.0f, Time.fixedDeltaTime * 3);
         else carRigidbody2D.drag = Mathf.Lerp(carRigidbody2D.drag, 0, Time.fixedDeltaTime * 10);
-
-        if (accelerationInput == 1)
-            engineSound.Play();
-        else engineSound.Pause();
-
 
         switch (GetSurface())
         {
@@ -198,29 +192,11 @@ public class CarController : MonoBehaviour
             yield return null;
         }
 
-        if (Physics2D.OverlapCircle(transform.position, 0.5f))
+        if (Physics2D.OverlapCircle(transform.position, 1.5f))
         {
-            /*isJumping = false;
-
-            Jump(0.2f, 0.9f);*/
-            carSpriteRenderer.transform.localScale = Vector3.one;
-
-            carShadowRenderer.transform.localPosition = Vector3.zero;
-            carShadowRenderer.transform.localScale = carSpriteRenderer.transform.localScale;
-
-            carCollider.enabled = true;
-
-            carSpriteRenderer.sortingLayerName = "Default";
-            carShadowRenderer.sortingLayerName = "Default";
-
-            if (jumpHeightScale > 0.2f)
-            {
-                carRigidbody2D.drag = Mathf.Lerp(carRigidbody2D.drag, 3.0f, Time.fixedDeltaTime * 3);
-                landingParticles.Play();
-            }
-
-
             isJumping = false;
+
+            Jump(0.2f, 0.6f);
         }
 
         else

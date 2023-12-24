@@ -7,7 +7,6 @@ TagManager:
   - CheckPoint
   - EnemyTurn
   - Jump
-  - Enemy
   layers:
   - Default
   - TransparentFX
