@@ -5,9 +5,14 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
+    public void Update()
+    {
+        GameObject.FindGameObjectWithTag("Music").GetComponent<MusicClass>().StopMusic();
+    }
+
     public void PlayGame()
     {
-        SceneManager.LoadSceneAsync(4);
+        SceneManager.LoadScene("CharacterSelect");
     }
 
     public void QuitGame()

@@ -7,7 +7,7 @@ public class TrackSelect2 : MonoBehaviour
 {
     public void PlayGame()
     {
-        SceneManager.LoadSceneAsync(3);
+        SceneManager.LoadScene("Track 2");
     }
 
 }

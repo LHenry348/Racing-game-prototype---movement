@@ -192,7 +192,7 @@ public class CarController : MonoBehaviour
             yield return null;
         }
 
-        if (Physics2D.OverlapCircle(transform.position, 1.5f))
+        /*if (Physics2D.OverlapCircle(transform.position, 1.5f))
         {
             isJumping = false;
 
@@ -218,6 +218,24 @@ public class CarController : MonoBehaviour
             }
 
             
+            isJumping = false;
+        }*/
+
+        if (jumpHeightScale > 0.2f)
+        {
+            carSpriteRenderer.transform.localScale = Vector3.one;
+
+            carShadowRenderer.transform.localPosition = Vector3.zero;
+            carShadowRenderer.transform.localScale = carSpriteRenderer.transform.localScale;
+
+            carCollider.enabled = true;
+
+            carSpriteRenderer.sortingLayerName = "Default";
+            carShadowRenderer.sortingLayerName = "Default";
+
+            carRigidbody2D.drag = Mathf.Lerp(carRigidbody2D.drag, 3.0f, Time.fixedDeltaTime * 3);
+            landingParticles.Play();
+
             isJumping = false;
         }
     }

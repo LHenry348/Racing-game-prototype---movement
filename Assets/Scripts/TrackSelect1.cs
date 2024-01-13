@@ -5,9 +5,14 @@ using UnityEngine.SceneManagement;
 
 public class TrackSelect1 : MonoBehaviour
 {
+    public void Update()
+    {
+        GameObject.FindGameObjectWithTag("Music").GetComponent<MusicClass>().PlayMusic();
+    }
+
     public void PlayGame()
     {
-        SceneManager.LoadSceneAsync(2);
+        SceneManager.LoadScene("Track 1");
     }
 
 }

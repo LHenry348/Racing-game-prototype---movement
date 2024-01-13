@@ -5,9 +5,24 @@ using UnityEngine.SceneManagement;
 
 public class BackButton : MonoBehaviour
 {
-    public void PlayGame()
+    public void Menu()
     {
-        SceneManager.LoadSceneAsync(0);
+        SceneManager.LoadScene("Menu");
+    }
+
+    public void LevelSelect()
+    {
+        SceneManager.LoadScene("Level Select");
+    }
+
+    public void CharacterSelect()
+    {
+        SceneManager.LoadScene("CharacterSelect");
+    }
+
+    public void Tutorial()
+    {
+        SceneManager.LoadScene("Tutorial");
     }
 
 }

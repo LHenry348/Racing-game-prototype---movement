@@ -7,6 +7,8 @@ using TMPro;
 public class CountdownUIHandler : MonoBehaviour
 {
     public Text countDownText;
+    public AudioSource countDown;
+    public AudioSource bgMusic;
 
     private void Awake()
     {
@@ -20,6 +22,7 @@ public class CountdownUIHandler : MonoBehaviour
     IEnumerator CountDownCO()
     {
         yield return new WaitForSeconds(0.3f);
+        countDown.Play();
         int counter = 3;
         while (true)
         {
@@ -36,5 +39,6 @@ public class CountdownUIHandler : MonoBehaviour
         }
         yield return new WaitForSeconds(0.5f);
         gameObject.SetActive(false);
+        bgMusic.Play();
     }
 }
