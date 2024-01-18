@@ -2,24 +2,24 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.UI;
+//using UnityEngine.UI;
 
 public class inGameMenuUIHandler : MonoBehaviour
 {
     Canvas canvas;
     public GameObject resumeButton;
     public GameObject resetButton;
-    public Text heading;
+    //public Text heading;
 
     private void Awake()
     {
-        heading.text = "Race over!";
+        //heading.text = "Race over!";
         canvas = GetComponent<Canvas>();
         canvas.enabled = false;
         GameManager.instance.OnGameStateChanged += OnGameStateChanged;
     }
 
-    void Update()
+    /*void Update()
     {
         if (Input.GetKeyDown(KeyCode.Return))
         {
@@ -39,7 +39,7 @@ public class inGameMenuUIHandler : MonoBehaviour
         resumeButton.SetActive(false);
         heading.text = "Race over!";
         canvas.enabled = false;
-    }
+    }*/
 
     public void OnRaceAgain()
     {
@@ -48,7 +48,7 @@ public class inGameMenuUIHandler : MonoBehaviour
 
     public void OnExitToMainMenu()
     {
-        SceneManager.LoadScene("Menu");
+        SceneManager.LoadScene("Level Select");
     }
 
     IEnumerator ShowMenuCO()

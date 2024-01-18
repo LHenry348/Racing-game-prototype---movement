@@ -140,7 +140,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      racing track 3_0: 88117302370997719
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -132,6 +132,35 @@ public class EnemyController : MonoBehaviour
         }
     }
 
+    float GetLateralVelocity()
+    {
+        return Vector2.Dot(transform.right, rb.velocity);
+    }
+
+    public bool IsDrifting(out float lateralVelocity, out bool isBraking)
+    {
+        lateralVelocity = GetLateralVelocity();
+        isBraking = false;
+
+        if (accelerationInput < 0 && velocityVsUp > 0)
+        {
+            isBraking = true;
+            return true;
+        }
+
+        if (Mathf.Abs(GetLateralVelocity()) > 2.0f)
+        {
+            return true;
+        }
+
+        return false;
+    }
+
+    public float GetVelocityMagnitude()
+    {
+        return rb.velocity.magnitude;
+    }
+
     public Offroad.SurfaceTypes GetSurface()
     {
         return surfaceDetection.GetCurrentSurface();
@@ -177,7 +206,7 @@ public class EnemyController : MonoBehaviour
             yield return null;
         }
 
-        if (Physics2D.OverlapCircle(transform.position, 1.5f))
+        /*if (Physics2D.OverlapCircle(transform.position, 1.5f))
         {
             isJumping = false;
 
@@ -201,6 +230,24 @@ public class EnemyController : MonoBehaviour
                 landingParticles.Play();
             }
 
+
+            isJumping = false;
+        }*/
+
+        if (jumpHeightScale > 0.2f)
+        {
+            carSpriteRenderer.transform.localScale = Vector3.one;
+
+            carShadowRenderer.transform.localPosition = Vector3.zero;
+            carShadowRenderer.transform.localScale = carSpriteRenderer.transform.localScale;
+
+            enemyCollider.enabled = true;
+
+            carSpriteRenderer.sortingLayerName = "Default";
+            carShadowRenderer.sortingLayerName = "Default";
+
+            rb.drag = Mathf.Lerp(rb.drag, 3.0f, Time.fixedDeltaTime * 3);
+            landingParticles.Play();
 
             isJumping = false;
         }

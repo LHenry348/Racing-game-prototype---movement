@@ -5,23 +5,28 @@ using UnityEngine;
 
 public class PositionHandler : MonoBehaviour
 {
+    LeaderboardUIHandler leaderboardUIHandler;
+
     public List<CarLapCounter> carLapCounters = new List<CarLapCounter>();
 
+    [System.Obsolete]
     private void Awake()
     {
-        
-    }
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        CarLapCounter[] carLapCounterArray = FindObjectsByType<CarLapCounter>(FindObjectsSortMode.None);
+        CarLapCounter[] carLapCounterArray = FindObjectsOfType<CarLapCounter>();
         carLapCounters = carLapCounterArray.ToList<CarLapCounter>();
 
         foreach (CarLapCounter lapCounters in carLapCounters)
         {
             lapCounters.OnPassCheckpoint += OnPassCheckpoint;
         }
+
+        leaderboardUIHandler = FindFirstObjectByType<LeaderboardUIHandler>();
+    }
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        leaderboardUIHandler.UpdateList(carLapCounters);
     }
     void OnPassCheckpoint(CarLapCounter carLapCounter)
     {
@@ -30,5 +35,7 @@ public class PositionHandler : MonoBehaviour
 
         int carPosition = carLapCounters.IndexOf(carLapCounter) + 1;
         carLapCounter.SetCarPosition(carPosition);
+
+        leaderboardUIHandler.UpdateList(carLapCounters);
     }
 }

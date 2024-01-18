@@ -45,6 +45,9 @@ TagManager:
   - name: Race track
     uniqueID: 1570540063
     locked: 0
+  - name: Tire tracks
+    uniqueID: 2433493575
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0

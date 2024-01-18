@@ -9670,6 +9670,8 @@ GameObject:
   - component: {fileID: 3003658271038935417}
   - component: {fileID: 5229470270993236483}
   - component: {fileID: 925596039953599612}
+  - component: {fileID: 2538126754171441273}
+  - component: {fileID: 542438109303994964}
   m_Layer: 0
   m_Name: Enemy Car
   m_TagString: Untagged
@@ -9693,7 +9695,7 @@ Transform:
   - {fileID: 8976266663299301103}
   - {fileID: 8056645316622797117}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &549002525176003883
 SpriteRenderer:
@@ -9879,7 +9881,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0.14}
+  m_Offset: {x: 0, y: 0.1}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -9889,7 +9891,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1.57, y: 3.23}
+  m_Size: {x: 1.77, y: 3.43}
   m_EdgeRadius: 0
 --- !u!114 &925596039953599612
 MonoBehaviour:
@@ -9907,6 +9909,33 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   offroadParticles: {fileID: 8897889121082844621}
+--- !u!114 &2538126754171441273
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5422966303109464384}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b426facfc433f3a489b4218d6ee1b656, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &542438109303994964
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5422966303109464384}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc8948043c731a14faed64d66836adfe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  engineAudio: {fileID: 0}
+  tireAudio: {fileID: 0}
+  collisionAudio: {fileID: 0}
 --- !u!1 &6331806866539009617
 GameObject:
   m_ObjectHideFlags: 0
@@ -9981,7 +10010,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: -1
   m_Sprite: {fileID: 21300000, guid: eb80f1152f27bfd4e8fa98a0df53d711, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.54509807}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.6117647}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
